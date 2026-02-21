@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://c42p3pnnr0sub"]
+
+[ext_resource type="PackedScene" uid="uid://cy2maylkht0nr" path="res://scenes/levels/level_template/level_template.tscn" id="1_jfd4l"]
+[ext_resource type="Script" uid="uid://rscu6t3lvbgb" path="res://scripts/LevelData.gd" id="1_pivof"]
+[ext_resource type="Resource" uid="uid://0cxysuhhfxvh" path="res://resources/items/item_test.tres" id="2_rhl3c"]
+
+[resource]
+script = ExtResource("1_pivof")
+level_id = "template"
+display_name = "Template Level"
+problem_dialogue = "Baby Dionysus Demands Something..."
+level_scene = ExtResource("1_jfd4l")
+reward_item = ExtResource("2_rhl3c")
+metadata/_custom_type_script = "uid://rscu6t3lvbgb"

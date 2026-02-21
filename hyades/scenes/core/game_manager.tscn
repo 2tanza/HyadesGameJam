@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bnbx8cktwtwir"]
+
+[ext_resource type="Script" uid="uid://chxi2xsh1irqf" path="res://scripts/GameManager.gd" id="1_k3ko1"]
+[ext_resource type="PackedScene" uid="uid://bqc7d7vdyjwyx" path="res://scenes/cutscenes/cutscene_player.tscn" id="2_x6flg"]
+[ext_resource type="Script" uid="uid://rscu6t3lvbgb" path="res://scripts/LevelData.gd" id="3_vegsa"]
+[ext_resource type="Resource" uid="uid://c42p3pnnr0sub" path="res://resources/levels/level_template_data.tres" id="4_504au"]
+
+[node name="GameManager" type="AudioListener2D" unique_id=120474311]
+script = ExtResource("1_k3ko1")
+cutscene_player_scene = ExtResource("2_x6flg")
+level_sequence = Array[ExtResource("3_vegsa")]([ExtResource("4_504au")])

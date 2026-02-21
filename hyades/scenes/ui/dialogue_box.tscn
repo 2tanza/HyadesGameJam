@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cnxdbj3yxx20t"]
+
+[ext_resource type="Script" uid="uid://cflmomfuu1h42" path="res://scripts/DialogueBox.gd" id="1_xg44k"]
+
+[node name="DialogueBox" type="Control" unique_id=164211968]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -652.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xg44k")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1739430817]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 200.0
+
+[node name="Margins" type="MarginContainer" parent="Panel" unique_id=490280671]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Layout" type="VBoxContainer" parent="Panel/Margins" unique_id=334814846]
+layout_mode = 2
+
+[node name="DialogueText" type="Label" parent="Panel/Margins/Layout" unique_id=1755401776]
+layout_mode = 2
+text = "Dialogue Goes Here"
+
+[node name="ContinueButton" type="Button" parent="Panel/Margins/Layout" unique_id=2024554944]
+layout_mode = 2
+text = "Continue"

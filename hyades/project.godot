@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Hyades"
+run/main_scene="uid://cvbtsn00amvtd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneLoader="*uid://d286m3bdpjpa2"
+AudioManager="*uid://cg3jo1ul1r2gn"
+GameManager="*uid://bnbx8cktwtwir"
 
 [physics]
 

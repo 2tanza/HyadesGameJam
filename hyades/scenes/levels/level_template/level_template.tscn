@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cy2maylkht0nr"]
+
+[ext_resource type="Script" uid="uid://6id6lxuct06x" path="res://scripts/LevelTemplate.gd" id="1_50oh6"]
+[ext_resource type="PackedScene" uid="uid://cnxdbj3yxx20t" path="res://scenes/ui/dialogue_box.tscn" id="2_50oh6"]
+
+[node name="LevelTemplate" type="Node2D" unique_id=505588048]
+position = Vector2(597, 126)
+script = ExtResource("1_50oh6")
+
+[node name="DebugLabel" type="Label" parent="." unique_id=1854343966]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -169.0
+offset_top = 70.0
+offset_right = 175.0
+offset_bottom = 93.0
+grow_horizontal = 2
+text = "Template Level - Press button to collect item"
+
+[node name="TestCollectButton" type="Button" parent="." unique_id=316972849]
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -15.5
+offset_right = 82.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "[Debug] Collect Item"
+
+[node name="DialogueBox" parent="." unique_id=164211968 instance=ExtResource("2_50oh6")]
+offset_left = -246.0
+offset_top = 145.0
+offset_right = -246.0
+offset_bottom = 145.0
