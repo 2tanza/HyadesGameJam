@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c8406pfc76hkv"]
 
-[ext_resource type="PackedScene" uid="uid://cyx6w664l6ida" path="res://scenes/characters/player.tscn" id="1_rbq2e"]
 [ext_resource type="Script" uid="uid://cvm5hphcy4cor" path="res://scripts/RoomCabin.gd" id="1_x75we"]
 [ext_resource type="Script" uid="uid://efv8u7iqb187" path="res://scripts/DoorToCellar.gd" id="2_x75we"]
 
@@ -35,4 +34,5 @@ offset_right = 169.0
 offset_bottom = 51.0
 text = "E: Enter Cellar"
 
-[node name="Player" parent="." unique_id=444148113 instance=ExtResource("1_rbq2e")]
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=1719281803]
+position = Vector2(397, 218)

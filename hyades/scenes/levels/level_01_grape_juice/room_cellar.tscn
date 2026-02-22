@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cm6lik7xfe725"]
 
-[ext_resource type="PackedScene" uid="uid://cyx6w664l6ida" path="res://scenes/characters/player.tscn" id="1_3qwxw"]
 [ext_resource type="Script" uid="uid://cmveesh7r37fv" path="res://scripts/RoomCellar.gd" id="1_kp413"]
 [ext_resource type="Script" uid="uid://dr71vvqvuc5k8" path="res://scripts/GrapeShelf.gd" id="2_c4m8k"]
 [ext_resource type="Script" uid="uid://neh0qosp6drn" path="res://scripts/StompingVat.gd" id="3_83eg8"]
+[ext_resource type="Texture2D" uid="uid://dc6hu8pmr72y" path="res://Assets/sprites/item_bottle.png" id="4_ct5hl"]
 [ext_resource type="Script" uid="uid://cjp4x5wp11siq" path="res://scripts/BottlePickup.gd" id="5_ct5hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83eg8"]
@@ -13,7 +13,7 @@ size = Vector2(80, 80)
 size = Vector2(80, 80)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l63go"]
-radius = 30.0
+radius = 46.010868
 
 [node name="RoomCellar" type="Node2D" unique_id=210012392]
 script = ExtResource("1_kp413")
@@ -23,12 +23,11 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.2922787, 0.1105446, 0.05078826, 1)
 
-[node name="Player" parent="." unique_id=444148113 instance=ExtResource("1_3qwxw")]
-
-[node name="GrapeShelf" type="Area2D" parent="." unique_id=1029761343]
+[node name="GrapeShelf" type="Area2D" parent="." unique_id=1029761343 node_paths=PackedStringArray("label")]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("2_c4m8k")
+label = NodePath("Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrapeShelf" unique_id=1947353209]
 position = Vector2(300, 360)
@@ -41,10 +40,11 @@ offset_right = 348.0
 offset_bottom = 309.0
 text = "E: Take Grape"
 
-[node name="StompingVat" type="Area2D" parent="." unique_id=1365943784]
+[node name="StompingVat" type="Area2D" parent="." unique_id=1365943784 node_paths=PackedStringArray("label")]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("3_83eg8")
+label = NodePath("Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompingVat" unique_id=1749519030]
 position = Vector2(930, 360)
@@ -57,13 +57,18 @@ offset_right = 964.0
 offset_bottom = 305.0
 text = "E: Stomp"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2014749940]
+[node name="JuiceBottle" type="Sprite2D" parent="." unique_id=2014749940]
+position = Vector2(787, 359)
+texture = ExtResource("4_ct5hl")
 
 [node name="BottlePickup" type="Area2D" parent="." unique_id=1204367204]
 collision_layer = 2
-collision_mask = 0
+collision_mask = 2
 script = ExtResource("5_ct5hl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottlePickup" unique_id=249986991]
-position = Vector2(891, 358)
+position = Vector2(788, 355)
 shape = SubResource("CircleShape2D_l63go")
+
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=441047122]
+position = Vector2(206, 114)

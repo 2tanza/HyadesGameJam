@@ -1,14 +1,7 @@
 extends Node2D
 
-signal go_to_cellar
-
-@onready var door: Area2D = $DoorToCellar
-@onready var player: Player = $Player
+# No Player node in this scene — Player lives in Level01GrapeJuice and persists between rooms.
+# There must be a Node2D called SpawnPoint in this scene to set where the player appears.
 
 func _ready() -> void:
-	door.door_used.connect(_on_door_used)
-	# Spawn player at starting position
-	player.position = Vector2(640, 400)
-
-func _on_door_used() -> void:
-	emit_signal("go_to_cellar")
+	pass
