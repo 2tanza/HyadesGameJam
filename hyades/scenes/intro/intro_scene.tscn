@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ci57xjvpgg6f0"]
+
+[ext_resource type="Script" uid="uid://bwxogph03cvcu" path="res://scripts/IntroScene.gd" id="1_t5lmq"]
+
+[node name="IntroScene" type="Node2D" unique_id=2129256788]
+script = ExtResource("1_t5lmq")
+
+[node name="BoarContainer" type="Node2D" parent="." unique_id=2060442479]
+
+[node name="DebugLabel" type="Label" parent="." unique_id=373542466]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 167.0
+offset_bottom = 37.0
+grow_horizontal = 2
+text = "Boars Remaining: 3"

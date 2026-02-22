@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c7alrwebb41y"]
+
+[ext_resource type="Script" uid="uid://gvbo4r0i4v0d" path="res://scripts/Level01GrapeJuice.gd" id="1_v10r1"]
+[ext_resource type="PackedScene" uid="uid://cnxdbj3yxx20t" path="res://scenes/ui/dialogue_box.tscn" id="2_otljq"]
+[ext_resource type="Resource" uid="uid://0ycc7kxho0j0" path="res://resources/levels/level_01_data.tres" id="2_scc42"]
+
+[node name="Level01GrapeJuice" type="Node" unique_id=1855296380]
+script = ExtResource("1_v10r1")
+level_data = ExtResource("2_scc42")
+
+[node name="DialogueBox" parent="." unique_id=164211968 instance=ExtResource("2_otljq")]
+offset_left = 198.0
+offset_top = 221.0
+offset_right = 198.0
+offset_bottom = 221.0
+
+[node name="RoomContainer" type="Node2D" parent="." unique_id=2015495662]

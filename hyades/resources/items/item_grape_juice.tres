@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://x6kk40btp3cn"]
+
+[ext_resource type="Texture2D" uid="uid://dc6hu8pmr72y" path="res://Assets/sprites/item_bottle.png" id="1_bwn7h"]
+[ext_resource type="Script" uid="uid://cfeg3b14hhbw6" path="res://scripts/ItemData.gd" id="1_ywtp4"]
+
+[resource]
+script = ExtResource("1_ywtp4")
+item_name = "Grape Juice"
+description = "Grape juice worthy of Dionysus"
+item_sprite = ExtResource("1_bwn7h")
+metadata/_custom_type_script = "uid://cfeg3b14hhbw6"

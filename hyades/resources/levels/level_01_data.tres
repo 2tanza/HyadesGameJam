@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://0ycc7kxho0j0"]
+
+[ext_resource type="Script" uid="uid://rscu6t3lvbgb" path="res://scripts/LevelData.gd" id="1_8rrjh"]
+[ext_resource type="Resource" uid="uid://x6kk40btp3cn" path="res://resources/items/item_grape_juice.tres" id="2_6alxp"]
+
+[resource]
+script = ExtResource("1_8rrjh")
+level_id = "level_01"
+display_name = "The Grape Juice Heist"
+problem_dialogue = "Baby Dionysus is WAILING! He's pointing at the cellar and screaming something about grape juice. You'd better figure this out fast."
+reward_item = ExtResource("2_6alxp")
+metadata/_custom_type_script = "uid://rscu6t3lvbgb"

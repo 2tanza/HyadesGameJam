@@ -1,5 +1,6 @@
 extends Control
 
+@onready var scene_loader = get_node("/root/SceneLoader")
 @onready var game_manager = get_node("/root/GameManager")
 
 func _ready() -> void:
@@ -10,5 +11,4 @@ func _ready() -> void:
 	$Button.pressed.connect(_on_start_pressed)
 
 func _on_start_pressed() -> void:
-	print("button pressed")
-	game_manager.start_game()
+	scene_loader.load_scene(preload("res://scenes/intro/intro_scene.tscn"))

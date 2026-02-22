@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c8406pfc76hkv"]
+
+[ext_resource type="PackedScene" uid="uid://cyx6w664l6ida" path="res://scenes/characters/player.tscn" id="1_rbq2e"]
+[ext_resource type="Script" uid="uid://cvm5hphcy4cor" path="res://scripts/RoomCabin.gd" id="1_x75we"]
+[ext_resource type="Script" uid="uid://efv8u7iqb187" path="res://scripts/DoorToCellar.gd" id="2_x75we"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sphu7"]
+size = Vector2(60, 80)
+
+[node name="RoomCabin" type="Node2D" unique_id=398866007]
+script = ExtResource("1_x75we")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=384628528]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.43514755, 0.23254767, 0.1580646, 1)
+
+[node name="DoorToCellar" type="Area2D" parent="." unique_id=945008639]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_x75we")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToCellar" unique_id=1928039772]
+position = Vector2(123, 40)
+shape = SubResource("RectangleShape2D_sphu7")
+
+[node name="Label" type="Label" parent="DoorToCellar" unique_id=1852969107]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="InteractPrompt" type="Label" parent="." unique_id=794651699]
+offset_left = 75.0
+offset_top = 28.0
+offset_right = 169.0
+offset_bottom = 51.0
+text = "E: Enter Cellar"
+
+[node name="Player" parent="." unique_id=444148113 instance=ExtResource("1_rbq2e")]
